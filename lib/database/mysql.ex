@@ -26,13 +26,13 @@ defimpl Plsm.Database, for: Plsm.Database.MySql do
   @spec connect(Plsm.Database.MySql) :: Plsm.Database.MySql
   def connect(db) do
     {_, conn} =
-      Mariaex.start_link(
-        hostname: db.server,
-        username: db.username,
-        port: db.port,
-        password: db.password,
-        database: db.database_name
-      )
+      # Mariaex.start_link(
+      #   hostname: db.server,
+      #   username: db.username,
+      #   port: db.port,
+      #   password: db.password,
+      #   database: db.database_name
+      # )
 
     %Plsm.Database.MySql{
       connection: conn,
