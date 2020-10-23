@@ -25,7 +25,7 @@ defimpl Plsm.Database, for: Plsm.Database.MySql do
 
   @spec connect(Plsm.Database.MySql) :: Plsm.Database.MySql
   def connect(db) do
-    {_, conn} =
+    # {_, conn} =
       # Mariaex.start_link(
       #   hostname: db.server,
       #   username: db.username,
@@ -34,14 +34,14 @@ defimpl Plsm.Database, for: Plsm.Database.MySql do
       #   database: db.database_name
       # )
 
-    %Plsm.Database.MySql{
-      connection: conn,
-      server: db.server,
-      port: db.port,
-      username: db.username,
-      password: db.password,
-      database_name: db.database_name
-    }
+    # %Plsm.Database.MySql{
+    #   connection: conn,
+    #   server: db.server,
+    #   port: db.port,
+    #   username: db.username,
+    #   password: db.password,
+    #   database_name: db.database_name
+    # }
   end
 
   # pass in a database and then get the tables using the mariaex query then turn the rows into a table
